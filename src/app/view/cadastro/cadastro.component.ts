@@ -31,16 +31,6 @@ export class CadastroComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(!this.token) {
-      this.logout();
-    }
-  }
-
-  logout() {    
-    localStorage.clear();
-    this.router.navigate(['login']).then(()=>{
-      window.location.reload();
-    });
   }
 
   upload(){
