@@ -13,7 +13,7 @@
     <section class="section-categoria">
         <h2>Livros recomendados</h2>
         <div class="containerLivros">
-            <div *ngFor="let l of service.livroCategoria" class='livro'>
+            <div *ngFor="let l of service.livroRecomendado" class='livro'>
                 <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">
                     <img src="https://api-node-production.up.railway.app/uploads/{{l.cd_img_livro}}" class="class-item-img" alt="">
                 </a>
