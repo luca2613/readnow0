@@ -54,7 +54,7 @@ export class EditarLivroComponent implements OnInit {
   }
 
   takeD(e:any) {
-    this.nm_livro = e.target.value;
+    this.ds_livro = e.target.value;
   }
 
   upload(){
