@@ -1,0 +1,35 @@
+<main>
+    <div class="logo">
+      <img src="assets/images/logo.png"  alt="logo">
+    </div>
+    <div class="container mt-5">
+      <form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+        <!-- errmsg show here -->
+        <div *ngIf="errmsgshow">
+          <p class="text-danger">{{ errmsg }}</p>
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+            placeholder="Email"
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="password"
+            class="form-control"
+            formControlName="senha"
+            placeholder="Senha  "
+          />
+        </div>
+        <div class="butt">
+          <button type="submit" class="btn btn-primary float-left">Login</button>
+        </div>
+        <div class="cadastro">Não possui uma conta? <a [routerLink]="['/cadastro']">Cadastre-se</a></div>
+      </form>
+    </div>  
+  </main>
+  
+  

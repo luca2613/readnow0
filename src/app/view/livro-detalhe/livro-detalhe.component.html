@@ -1,0 +1,29 @@
+<main  id="link1">
+    <section *ngFor="let l of service.livro" class="section-livro">
+        <div class='info-livro'>
+            <img src="https://api-node-production.up.railway.app/uploads/{{l.cd_img_livro}}" class="class-item-img" alt="">
+            </div>
+            <div class='info-livro'>
+            <h1>{{l.nm_livro}}</h1>
+            <h2>{{l.nm_autor}}</h2>
+            <p>{{l.ds_livro}}</p>
+        </div>
+    </section>
+
+    <section class="section-categoria">
+        <h2>Livros recomendados</h2>
+        <div class="containerLivros">
+            <div *ngFor="let l of service.livroCategoria" class='livro'>
+                <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">
+                    <img src="https://api-node-production.up.railway.app/uploads/{{l.cd_img_livro}}" class="class-item-img" alt="">
+                </a>
+                <div class='tituloLivro'><span>
+                <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.cd_categoria }">{{l.nm_livro}}</a>
+                </span></div>
+                <div class='autorLivro'>
+                    <span><a [routerLink]="['/autor']" [queryParams]="{ id: l.cd_autor, nome: l.nm_autor}">{{l.nm_autor}}</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>

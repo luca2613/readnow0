@@ -1,0 +1,19 @@
+<main>
+    <h1>Resultados de: {{this.search}}</h1>
+
+    <div class="containerLivros">
+        <div *ngFor="let l of this.service.livroBusca" class='livro'>
+            <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">
+                <img src="https://api-node-production.up.railway.app/uploads/{{l.cd_img_livro}}" class="class-item-img" alt="">
+            </a>
+            <section>
+                <div class='tituloLivro'><span>
+                    <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">{{l.nm_livro}}</a>
+                </span></div>
+                <div class='autorLivro'>
+                    <span><a [routerLink]="['/autor']" [queryParams]="{ id: l.cd_autor, nome: l.nm_autor}">{{l.nm_autor}}</a></span>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>

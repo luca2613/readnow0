@@ -1,0 +1,54 @@
+<main>
+    <div class="logo">
+      <img src="assets/images/logo.png"  alt="logo">
+    </div>
+    <div class="container mt-5">
+      <form>
+        <!-- errmsg show here -->
+        <div *ngIf="errmsgshow">
+          <p class="text-danger">{{ errmsg }}</p>
+        </div>
+        <div class="mb-3">
+          <input type="file" name="upfile" (change)="selectImage($event)" required>
+        </div>
+        <div class="mb-3">
+            <input
+              type="text"
+              class="form-control"
+              [(ngModel)]="nome"
+              placeholder="Nome"
+              required
+              name="nome"
+            />
+        </div>
+        <div class="mb-3">
+          <input
+            type="email"
+            class="form-control"
+            [(ngModel)]="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <input
+            type="password"
+            class="form-control"
+            [(ngModel)]="senha"
+            name="senha"
+            placeholder="Senha" required
+          />
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" [(ngModel)]="descricao" placeholder="Descrição" name="descricao" required></textarea>
+          </div>
+        <div class="butt">
+          <button type="submit" class="btn btn-primary float-left" (click)="this.cadastroSubmit()">cadastrar</button>
+        </div>
+        <div class="cadastro"><a [routerLink]="['/login']">Já possuo uma conta </a></div>
+      </form>
+    </div>  
+  </main>
+  
+  

@@ -1,0 +1,15 @@
+<main>
+    <section *ngFor="let a of service.autorProfile">
+        <div class="foto">
+            <img src="https://api-node-production.up.railway.app/uploads/{{a.cd_img_autor}}" class="class-item-img" alt="">
+        </div>
+        <div class="info">
+            <div class="nome">Nome:<br>{{a.nm_autor}}</div>
+            <!-- <div class="senha_email"></div> -->
+            <div class="descricao">Descrição:<br>{{a.ds_autor}}</div>
+        </div>
+        <div class="info2">
+            <div class="email">Email:<br>{{a.email}}</div>
+        </div>
+    </section>
+</main>

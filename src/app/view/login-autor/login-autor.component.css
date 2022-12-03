@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    margin: 0;
+}
+
+.logo img{
+    width: 250px;
+    height: 150px;
+}
+
+.btn {
+    background-color: #ffd700;
+    border: none;
+}
+
+.butt {
+    display: flex;
+    justify-content:flex-end;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+.cadastro {
+    display: flex;
+    justify-content: center;
+}
+
+.cadastro a {
+    margin-left: 5px;
+    color:#ffd700;
+    font-weight: bold;
+
+}

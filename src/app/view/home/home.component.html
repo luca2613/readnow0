@@ -1,0 +1,30 @@
+<main>
+    <section class="bannerHome">
+        <div class="bannerChild">
+            <div class="textBanner">
+                <p>Venha divulgar seus livros em nossa<br/>comunidade</p><p>Acesse a área do autor</p>
+                <a [routerLink]="['/login']">Acesse já</a>
+            </div>
+        </div>
+        <div class="bannerChild">
+            <img src="assets/images/livro_banner.png" width="300" class="img_banner" alt="banner">
+        </div>
+    </section>
+    <h1>Lançamentos</h1>
+
+    <div class="containerLivros">
+        <div *ngFor="let l of service.livro" class='livro'>
+            <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">
+                <img src="https://api-node-production.up.railway.app/uploads/{{l.cd_img_livro}}" class="class-item-img" alt="">
+            </a>
+            <section>
+                <div class='tituloLivro'><span>
+                    <a [routerLink]="['/livro']" [queryParams]="{ id: l.cd_livro, nome: l.nm_livro, categoria: l.nm_categoria }">{{l.nm_livro}}</a>
+                </span></div>
+                <div class='autorLivro'>
+                    <span><a [routerLink]="['/autor']" [queryParams]="{ id: l.cd_autor, nome: l.nm_autor}">{{l.nm_autor}}</a></span>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>

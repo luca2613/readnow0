@@ -1,0 +1,100 @@
+*{
+    font-family: 'Helvetica';
+}
+
+.img_banner {}
+
+h1 {
+    color: black;
+    font-size: 1.8rem;
+    margin-left: 3em;
+}
+
+main {
+    margin: 20px auto;
+    width: 90%;
+}
+
+.bannerHome {
+    background-color: #439ae0;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.bannerChild {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.bannerChild p:nth-child(1) {
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: cursive;
+    color: white;
+} 
+
+.bannerChild p:nth-child(2) {
+    font-size: 1.0em;
+    color: white;
+} 
+
+.textBanner a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    background-color: #e56717;
+    padding: 11px;
+    color: white;
+}
+
+.bannerChild:nth-child(1) {
+}
+
+.bannerChild:nth-child(2) {
+}
+
+.containerLivros {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.livro {
+    width: calc(1000px - 5);
+    width: 200px;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.class-item-img {
+    width: 100%;
+    height: 290px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.tituloLivro {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.tituloLivro a{
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.autorLivro a{
+    color: black;
+    font-size: 1rem;
+    text-decoration: none;
+}
