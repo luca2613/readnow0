@@ -22,6 +22,7 @@ export class ControllerService {
   livroAutor: LivroResponse[] | null = null;
   autor: Autor[] | null = null;
   autorProfile: Autor[] | null = null;
+  livroRecomendado: LivroResponse[] | null = null;
 
   constructor(private http:HttpClient) { }
 
@@ -126,6 +127,17 @@ export class ControllerService {
     ).subscribe(
       (Response) => {
         this.livroCategoria = Response;
+      }
+    )
+    return false;
+  }
+
+  getLivroRecomendado(nome:any, id:any) {
+    this.http.get<LivroResponse[]>(
+      this.apiUrl + "/livros/recomendado/" + nome + "/" + id
+    ).subscribe(
+      (Response) => {
+        this.livroRecomendado = Response;
       }
     )
     return false;
